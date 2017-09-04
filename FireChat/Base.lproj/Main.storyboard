@@ -1,26 +1,176 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iA8-1f-Y6y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Anonymous LoginVC-->
+        <scene sceneID="Rf7-2h-mn8">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iA8-1f-Y6y" customClass="AnonymousLoginVC" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Ubi-1O-8Ex"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKZ-k9-QOB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="RHB-S7-XWs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alias..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4G-u9-aaQ">
+                                <rect key="frame" x="38" y="306.5" width="299" height="55"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGl-Cl-DTi">
+                                <rect key="frame" x="38" y="425.5" width="299" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBoldItalic" family="Avenir Next Condensed" pointSize="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="iA8-1f-Y6y" eventType="touchUpInside" id="kqP-F9-Hpu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Fire Chat Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfa-BU-kTf">
+                                <rect key="frame" x="38" y="70" width="299" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.72316530919999999" blue="0.13245393750000001" alpha="0.98419526459999995" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="f4G-u9-aaQ" firstAttribute="leading" secondItem="pGl-Cl-DTi" secondAttribute="leading" id="2pv-3l-GSh"/>
+                            <constraint firstItem="pGl-Cl-DTi" firstAttribute="top" secondItem="f4G-u9-aaQ" secondAttribute="bottom" constant="64" id="5of-tm-qKF"/>
+                            <constraint firstItem="f4G-u9-aaQ" firstAttribute="centerX" secondItem="wfa-BU-kTf" secondAttribute="centerX" id="JzI-b7-EIG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wfa-BU-kTf" secondAttribute="trailing" constant="22" id="Oec-iI-h6T"/>
+                            <constraint firstItem="f4G-u9-aaQ" firstAttribute="width" secondItem="wfa-BU-kTf" secondAttribute="width" id="Rkn-6X-7QO"/>
+                            <constraint firstItem="f4G-u9-aaQ" firstAttribute="height" secondItem="wfa-BU-kTf" secondAttribute="height" id="UZ0-xt-NE5"/>
+                            <constraint firstItem="wfa-BU-kTf" firstAttribute="top" secondItem="Ubi-1O-8Ex" secondAttribute="bottom" constant="50" id="YdH-Vu-vUG"/>
+                            <constraint firstItem="wfa-BU-kTf" firstAttribute="leading" secondItem="RHB-S7-XWs" secondAttribute="leadingMargin" constant="22" id="bJ1-Y6-mLP"/>
+                            <constraint firstItem="f4G-u9-aaQ" firstAttribute="centerY" secondItem="RHB-S7-XWs" secondAttribute="centerY" id="j7I-d2-p3f"/>
+                            <constraint firstItem="pGl-Cl-DTi" firstAttribute="width" secondItem="wfa-BU-kTf" secondAttribute="width" id="spM-IZ-tSE"/>
+                            <constraint firstItem="pGl-Cl-DTi" firstAttribute="height" secondItem="wfa-BU-kTf" secondAttribute="height" id="thZ-SZ-lDm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aliasTextField" destination="f4G-u9-aaQ" id="F66-C0-BiJ"/>
+                        <segue destination="QaX-bA-ejS" kind="show" identifier="loggedInSegue" id="xw2-GK-lSz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vdr-7f-p0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="238" y="-531"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jlK-fe-Rbo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QaX-bA-ejS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="N2k-gP-nIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.72316530919999999" blue="0.13245393750000001" alpha="0.98419526459999995" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kAR-OE-7AR" kind="relationship" relationship="rootViewController" id="2fs-bM-sSj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5s-2b-9HU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="199"/>
+        </scene>
+        <!--Topics-->
+        <scene sceneID="KWR-Ut-uRX">
+            <objects>
+                <tableViewController id="kAR-OE-7AR" customClass="TopicsController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N3h-7C-u5R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newTopicCell" id="pXJ-MI-hPd" customClass="NewTopicCell" customModule="FireChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pXJ-MI-hPd" id="pdJ-P5-TAb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-nw-bfg">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1" horizontalCompressionResistancePriority="1" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmi-9w-RPo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="27.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muW-tx-jd3">
+                                                    <rect key="frame" x="337" y="0.0" width="22" height="27.5"/>
+                                                    <connections>
+                                                        <action selector="addTopicTapped:" destination="pXJ-MI-hPd" eventType="touchUpInside" id="Ga6-sW-2W6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ozg-nw-bfg" secondAttribute="trailing" id="6Tq-Ro-7kt"/>
+                                        <constraint firstItem="ozg-nw-bfg" firstAttribute="leading" secondItem="pdJ-P5-TAb" secondAttribute="leadingMargin" id="Fpp-cP-wf7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ozg-nw-bfg" secondAttribute="bottom" id="IA3-HX-fUP"/>
+                                        <constraint firstItem="ozg-nw-bfg" firstAttribute="top" secondItem="pdJ-P5-TAb" secondAttribute="topMargin" id="x2p-0c-F8P"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="topicTextField" destination="bmi-9w-RPo" id="qIY-Sc-zFu"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="topicCell" id="HHR-XK-jdG" customClass="TopicCell" customModule="FireChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHR-XK-jdG" id="KQg-pG-JhQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damka Tournement..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-l0-VU3">
+                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.49503407579999997" blue="0.090669742740000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1ya-l0-VU3" firstAttribute="leading" secondItem="KQg-pG-JhQ" secondAttribute="leadingMargin" id="DbQ-Kh-m9a"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ya-l0-VU3" secondAttribute="bottom" id="GcR-0q-HAW"/>
+                                        <constraint firstItem="1ya-l0-VU3" firstAttribute="top" secondItem="KQg-pG-JhQ" secondAttribute="topMargin" id="Qgl-Rz-Ysb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1ya-l0-VU3" secondAttribute="trailing" id="ekL-86-Sdd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="topicTextField" destination="1ya-l0-VU3" id="mtI-u6-5eX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kAR-OE-7AR" id="kO5-kB-0A2"/>
+                            <outlet property="delegate" destination="kAR-OE-7AR" id="wkA-0Q-ePv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Topics" id="TSH-uz-gqC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xc7-HP-txF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="198"/>
         </scene>
     </scenes>
 </document>
