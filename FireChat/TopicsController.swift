@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
-
+import Photos
 
 class TopicsController: UITableViewController {
     

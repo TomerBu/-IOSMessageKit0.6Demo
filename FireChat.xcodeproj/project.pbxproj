@@ -14,6 +14,8 @@
 		364AEBF81F5D5716009BC686 /* NewTopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364AEBF71F5D5716009BC686 /* NewTopicCell.swift */; };
 		364AEBFA1F5D5727009BC686 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364AEBF91F5D5727009BC686 /* TopicCell.swift */; };
 		364AEBFE1F5D6F40009BC686 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364AEBFD1F5D6F40009BC686 /* Topic.swift */; };
+		364AEC001F5DDFA6009BC686 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364AEBFF1F5DDFA6009BC686 /* ChatController.swift */; };
+		364AEC021F5DE0F0009BC686 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364AEC011F5DE0F0009BC686 /* Message.swift */; };
 		36E007051F5D269F00DB3B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E007041F5D269F00DB3B79 /* AppDelegate.swift */; };
 		36E0070A1F5D269F00DB3B79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E007081F5D269F00DB3B79 /* Main.storyboard */; };
 		36E0070C1F5D269F00DB3B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E0070B1F5D269F00DB3B79 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		364AEBF71F5D5716009BC686 /* NewTopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTopicCell.swift; sourceTree = "<group>"; };
 		364AEBF91F5D5727009BC686 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		364AEBFD1F5D6F40009BC686 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		364AEBFF1F5DDFA6009BC686 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		364AEC011F5DE0F0009BC686 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		36E007011F5D269F00DB3B79 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E007041F5D269F00DB3B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36E007091F5D269F00DB3B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			children = (
 				364AEBF21F5D4033009BC686 /* AnonymousLoginVC.swift */,
 				364AEBF41F5D479D009BC686 /* TopicsController.swift */,
+				364AEBFF1F5DDFA6009BC686 /* ChatController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -75,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				364AEBFD1F5D6F40009BC686 /* Topic.swift */,
+				364AEC011F5DE0F0009BC686 /* Message.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FireChat/Pods-FireChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -264,6 +271,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -281,8 +289,10 @@
 			files = (
 				364AEBF31F5D4033009BC686 /* AnonymousLoginVC.swift in Sources */,
 				364AEBFE1F5D6F40009BC686 /* Topic.swift in Sources */,
+				364AEC001F5DDFA6009BC686 /* ChatController.swift in Sources */,
 				36E007051F5D269F00DB3B79 /* AppDelegate.swift in Sources */,
 				364AEBF81F5D5716009BC686 /* NewTopicCell.swift in Sources */,
+				364AEC021F5DE0F0009BC686 /* Message.swift in Sources */,
 				364AEBFA1F5D5727009BC686 /* TopicCell.swift in Sources */,
 				364AEBF51F5D479D009BC686 /* TopicsController.swift in Sources */,
 			);

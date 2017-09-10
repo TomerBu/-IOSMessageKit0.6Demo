@@ -9,5 +9,6 @@ target 'FireChat' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'MessageKit', '~> 0.6'
   
 end
